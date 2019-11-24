@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
-import { BrowserRouter as Router, Route, Link } from "react-router-dom";
+import { BrowserRouter as Router, Route } from "react-router-dom";
 import { Provider } from "react-redux";
+import {ALBUMS, USER, ROOT} from "./constants"
 
 // Css
 import './App.css';
@@ -53,8 +54,8 @@ class App extends Component {
         <Router>
           <div className="App">
             <NavBar openLoginUserModal={this.openModal} />
-            <Route path="/" exact render={(props) => <Home {...props}  recomendadosList={this.state.albums} />}/>
-            <Route path="/albums" render={(props) => <Albums {...props}  recomendadosList={this.state.albums} />}/>
+            <Route path={ROOT} exact render={(props) => <Home {...props}  recomendadosList={this.state.albums} />}/>
+            <Route path={ALBUMS} render={(props) => <Albums {...props}  recomendadosList={this.state.albums} />}/>
             <Modal open={this.state.openModal}>
               <LoginUser closeModal={this.closeModal} />
             </Modal>

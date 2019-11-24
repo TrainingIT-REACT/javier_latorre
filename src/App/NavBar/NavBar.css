@@ -16,6 +16,9 @@
     position: relative;
     padding-right: 24px;
 }
+.NavBar > .logo a {
+    text-decoration: none;
+}
 .logo_first {
     color: #70C38D;
 }

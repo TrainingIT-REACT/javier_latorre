@@ -1,5 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
+import { Link } from "react-router-dom";
+import { ROOT } from '../constants'
 
 // Css
 import './NavBar.css';
@@ -9,10 +11,10 @@ const NavBar = ({name, openLoginUserModal}) => {
   return (
     <div className="NavBar">
      <div className="logo">
-        <span className="logo_first">Musi</span><span className="logo_last">K</span>
+        <Link to={ROOT}><span className="logo_first">Musi</span><span className="logo_last">K</span></Link>
      </div>
      {
-       name ==='' ? (
+       name === '' ? (
       <div onClick={openLoginUserModal} className="user">
         <span>Login {name}</span>
       </div>
