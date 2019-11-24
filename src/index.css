@@ -10,6 +10,14 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+#modal {
+  left: 0;
+  top: 0;
+  position: absolute;
+  z-index: 999;
+  width: 100%;
+}
+
 h1 {
   text-align: center;
 }
