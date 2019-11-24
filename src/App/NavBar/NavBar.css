@@ -1,0 +1,27 @@
+.NavBar {
+    width: 100%;
+    background: #252526;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.NavBar > div {
+    padding: 12px;
+    cursor: pointer;
+}
+
+.logo {
+    border-right: 1px solid #CFD0D0;
+}
+.logo_first {
+    color: #70C38D;
+}
+.logo_last {
+    color: #CACA41;
+    font-weight: 700;
+}
+
+.user {
+    border-left: 1px solid #CFD0D0;
+}
