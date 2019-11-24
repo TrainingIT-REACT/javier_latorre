@@ -1,8 +1,12 @@
 import React, { Component } from 'react';
-import { BrowserRouter as Router, Route, Link } from "react-router-dom"; 
+import { BrowserRouter as Router, Route, Link } from "react-router-dom";
+import { Provider } from "react-redux";
 
 // Css
 import './App.css';
+
+// Store
+import store from './store';
 
 //Components
 import NavBar from './NavBar'
@@ -20,11 +24,13 @@ class App extends Component {
       albums: []
     }
   }
+  
+  openModal = () => {
+    this.setState({openModal: true});
+  } 
 
-  toggleModal = () => {
-    this.setState(state => ({
-      openModal: !state.openModal
-    }));
+  closeModal = () => {
+    this.setState({openModal: false});
   } 
 
   async componentDidMount() {
@@ -43,16 +49,18 @@ class App extends Component {
 
   render() {
     return (
-      <Router>
-        <div className="App">
-          <NavBar openLoginUserModal={this.toggleModal} />
-          <Route path="/" exact render={(props) => <Home {...props}  recomendadosList={this.state.albums} />}/>
-          <Route path="/albums" render={(props) => <Albums {...props}  recomendadosList={this.state.albums} />}/>
-          <Modal open={this.state.openModal}>
-            <LoginUser closeModal={this.toggleModal} />
-          </Modal>
-        </div>
-      </Router>
+      <Provider store={store}>
+        <Router>
+          <div className="App">
+            <NavBar openLoginUserModal={this.openModal} />
+            <Route path="/" exact render={(props) => <Home {...props}  recomendadosList={this.state.albums} />}/>
+            <Route path="/albums" render={(props) => <Albums {...props}  recomendadosList={this.state.albums} />}/>
+            <Modal open={this.state.openModal}>
+              <LoginUser closeModal={this.closeModal} />
+            </Modal>
+          </div>
+        </Router>
+      </Provider>
     );
   }
 }
