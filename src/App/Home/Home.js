@@ -1,15 +1,16 @@
 import React from 'react';
 import { Link } from "react-router-dom";
+import { connect } from 'react-redux';
 import { ALBUMS } from '../constants'
 
 // Css
 import './Home.css';
 
-const Home = (props) => {
+const Home = ({name}) => {
   
   return (
     <>
-      <h1>Inicio. Lista recomendada</h1>
+      {name === '' ? <h1>Temas más escuchados por los usuarios:</h1> : <h1>¡Bienvenido, {name}! Esta es tu lista de recomendados</h1>}
       <p>TODO lista random de canciones</p>
       <Link to={ALBUMS} >Ver albums disponibles</Link>
       
@@ -17,4 +18,12 @@ const Home = (props) => {
   );
 }
 
-export default Home;
+const mapStateToProps = (state) => {
+  return {
+    name: state.user.name
+  }
+}
+
+export default connect(
+  mapStateToProps
+)(Home);

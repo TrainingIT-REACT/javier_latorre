@@ -29,7 +29,7 @@ const NavBar = ({name, openLoginUserModal}) => {
   );
 }
 
-const mapStateToProps = (state/*, otherProps */) => {
+const mapStateToProps = (state) => {
   return {
     name: state.user.name
   }
