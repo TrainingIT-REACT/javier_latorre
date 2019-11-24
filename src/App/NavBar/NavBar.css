@@ -11,8 +11,10 @@
     cursor: pointer;
 }
 
-.logo {
+.NavBar > .logo {
     border-right: 1px solid #CFD0D0;
+    position: relative;
+    padding-right: 24px;
 }
 .logo_first {
     color: #70C38D;
@@ -20,8 +22,15 @@
 .logo_last {
     color: #CACA41;
     font-weight: 700;
+    position: absolute;
+}
+.logo:hover .logo_last {
+    transform: rotate(20deg);
 }
 
-.user {
+.NavBar > .user {
     border-left: 1px solid #CFD0D0;
+}
+.user:hover {
+    background: #37373D;
 }

@@ -1,10 +1,13 @@
 import React, { Component } from 'react';
+import { BrowserRouter as Router, Route, Link } from "react-router-dom"; 
 
 // Css
 import './App.css';
 
 //Components
 import NavBar from './NavBar'
+import Home from './Home'
+import Albums from './Albums'
 
 class App extends Component {
   constructor(props) {
@@ -32,16 +35,13 @@ class App extends Component {
 
   render() {
     return (
-      <div className="App">
-        <NavBar />
-        <h1>Inicio. Lista recomendada</h1>
-          { this.state.loading ?
-            <p>Cargando...</p>
-            : <ul>
-              {this.state.albums.map(album => <li key={album.id}>{album.name}</li>)}
-            </ul>
-          }
-      </div>
+      <Router>
+        <div className="App">
+          <NavBar />
+          <Route path="/" exact render={(props) => <Home {...props}  recomendadosList={this.state.albums} />}/>
+          <Route path="/albums" render={(props) => <Albums {...props}  recomendadosList={this.state.albums} />}/>
+        </div>
+      </Router>
     );
   }
 }
