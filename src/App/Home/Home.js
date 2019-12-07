@@ -15,7 +15,9 @@ const Home = ({ name }) => {
         <h1>¡Bienvenido, {name}! Esta es tu lista de recomendados</h1>
       )}
       <p>TODO lista random de canciones</p>
-      <Link to={ALBUMS}>Ver albums disponibles</Link>
+      <Link className="link" to={ALBUMS}>
+        Ver albums disponibles
+      </Link>
     </>
   );
 };

@@ -1,0 +1,26 @@
+.songs-container {
+  display: flex;
+  margin: 32px;
+}
+
+.songs-list {
+  margin-left: 16px;
+}
+
+.song-name {
+  padding-right: 8px;
+  color: #00feff;
+  cursor: pointer;
+}
+
+.song-name:hover {
+  text-decoration: underline;
+}
+
+.song-duration {
+  font-size: 10px;
+}
+
+.link-to-albums {
+  margin-left: 32px;
+}

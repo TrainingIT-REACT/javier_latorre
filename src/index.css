@@ -21,3 +21,11 @@ body {
 h1 {
   text-align: center;
 }
+
+.link {
+  text-decoration: none;
+  color: #70c38d;
+}
+.link:hover {
+  color: #afffcb;
+}
