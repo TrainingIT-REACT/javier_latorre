@@ -1,11 +1,11 @@
-import types from '../actions/types';
+import types from "../actions/types";
 
 const initialState = {
   name: ""
-}
+};
 
 const reducer = (state = initialState, action) => {
-  switch(action.type) {
+  switch (action.type) {
     case types.UPDATE_NAME:
       return {
         name: action.name
@@ -13,6 +13,6 @@ const reducer = (state = initialState, action) => {
     default:
       return state;
   }
-}
+};
 
 export default reducer;

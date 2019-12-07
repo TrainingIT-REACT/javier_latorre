@@ -1,2 +1,2 @@
-import Albums from './Albums';
+import Albums from "./Albums";
 export default Albums;

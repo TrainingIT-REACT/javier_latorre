@@ -1,39 +1,39 @@
 .NavBar {
-    width: 100%;
-    background: #252526;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-between;
+  width: 100%;
+  background: #252526;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
 }
 .NavBar > div {
-    padding: 12px;
-    cursor: pointer;
+  padding: 12px;
+  cursor: pointer;
 }
 
 .NavBar > .logo {
-    border-right: 1px solid #CFD0D0;
-    position: relative;
-    padding-right: 24px;
+  border-right: 1px solid #cfd0d0;
+  position: relative;
+  padding-right: 24px;
 }
 .NavBar > .logo a {
-    text-decoration: none;
+  text-decoration: none;
 }
 .logo_first {
-    color: #70C38D;
+  color: #70c38d;
 }
 .logo_last {
-    color: #CACA41;
-    font-weight: 700;
-    position: absolute;
+  color: #caca41;
+  font-weight: 700;
+  position: absolute;
 }
 .logo:hover .logo_last {
-    transform: rotate(20deg);
+  transform: rotate(20deg);
 }
 
 .NavBar > .user {
-    border-left: 1px solid #CFD0D0;
+  border-left: 1px solid #cfd0d0;
 }
 .user:hover {
-    background: #37373D;
+  background: #37373d;
 }
