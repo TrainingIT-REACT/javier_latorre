@@ -31,6 +31,18 @@
   transform: rotate(20deg);
 }
 
+.NavBar > .albums {
+  flex-grow: 1;
+}
+.NavBar > .albums a {
+  text-decoration: none;
+  color: #70c38d;
+}
+
+.NavBar > .albums:hover a {
+  text-decoration: underline;
+}
+
 .NavBar > .user {
   border-left: 1px solid #cfd0d0;
 }

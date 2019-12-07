@@ -1,40 +1,40 @@
-import React from 'react';
-import { connect } from 'react-redux';
+import React from "react";
+import { connect } from "react-redux";
 import { Link } from "react-router-dom";
-import { ROOT } from '../constants'
+import { ROOT, ALBUMS } from "../constants";
 
 // Css
-import './NavBar.css';
+import "./NavBar.css";
 
-const NavBar = ({name, openLoginUserModal}) => {
-  
+const NavBar = ({ name, openLoginUserModal }) => {
   return (
     <div className="NavBar">
-     <div className="logo">
-        <Link to={ROOT}><span className="logo_first">Musi</span><span className="logo_last">K</span></Link>
-     </div>
-     {
-       name === '' ? (
-      <div onClick={openLoginUserModal} className="user">
-        <span>Login {name}</span>
+      <div className="logo">
+        <Link to={ROOT}>
+          <span className="logo_first">Musi</span>
+          <span className="logo_last">K</span>
+        </Link>
       </div>
-       ) : (
-      <div onClick={openLoginUserModal} className="user">
-        <span>{name}</span>
+      <div className="albums">
+        <Link to={ALBUMS}>Albums</Link>
       </div>
-       )
-     }
-     
+      {name === "" ? (
+        <div onClick={openLoginUserModal} className="user">
+          <span>Login {name}</span>
+        </div>
+      ) : (
+        <div onClick={openLoginUserModal} className="user">
+          <span>{name}</span>
+        </div>
+      )}
     </div>
   );
-}
+};
 
-const mapStateToProps = (state) => {
+const mapStateToProps = state => {
   return {
     name: state.user.name
-  }
-}
+  };
+};
 
-export default connect(
-  mapStateToProps
-)(NavBar);
+export default connect(mapStateToProps)(NavBar);
