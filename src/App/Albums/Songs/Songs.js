@@ -36,7 +36,7 @@ class Songs extends Component {
     } else {
       return (
         <>
-          <h1>{albumName}</h1>
+          <h1>{albumName} (Añadir tiempo total)</h1>
           <Link className="link-to-albums link" to={`${ALBUMS}`}>
             &lt; Back to Albums
           </Link>

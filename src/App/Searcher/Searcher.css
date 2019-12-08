@@ -1,0 +1,13 @@
+.Searcher {
+  margin-top: 8px;
+  margin-right: 8px;
+  float: right;
+}
+
+.text-field {
+  padding-top: 3px;
+}
+
+.clear {
+  clear: both;
+}

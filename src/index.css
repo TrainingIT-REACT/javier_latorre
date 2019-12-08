@@ -20,6 +20,8 @@ body {
 
 h1 {
   text-align: center;
+  margin: 8px 0;
+  font-size: 24px;
 }
 
 .link {
@@ -28,4 +30,15 @@ h1 {
 }
 .link:hover {
   color: #afffcb;
+}
+
+button {
+  background: #333;
+  border: none;
+  padding: 3px;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #454545;
 }
