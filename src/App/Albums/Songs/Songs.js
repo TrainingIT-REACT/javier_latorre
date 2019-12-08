@@ -23,6 +23,10 @@ class Songs extends Component {
   renderSongs = () => {
     const { isLoading, error, canciones } = this.props.canciones;
     const { albums } = this.props.albums;
+    const totalSegundos = canciones.reduce(
+      (acc, curr) => acc + curr.seconds,
+      0
+    );
     const albumName = albums[0]
       ? albums[0].name
       : "El album que buscas no existe :(";
@@ -36,7 +40,12 @@ class Songs extends Component {
     } else {
       return (
         <>
-          <h1>{albumName} (Añadir tiempo total)</h1>
+          <h1>
+            {albumName}{" "}
+            <span className="title-time">
+              ({(totalSegundos / 60).toFixed(2)} minutos)
+            </span>
+          </h1>
           <Link className="link-to-albums link" to={`${ALBUMS}`}>
             &lt; Back to Albums
           </Link>
