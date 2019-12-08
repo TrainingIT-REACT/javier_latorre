@@ -24,7 +24,19 @@ const NavBar = ({ name, openLoginUserModal }) => {
         </div>
       ) : (
         <div onClick={openLoginUserModal} className="user">
-          <span>{name}</span>
+          <span>
+            <span className="user-icon" role="img" aria-label="user-icon">
+              🙂
+            </span>
+            <span
+              className="user-icon hover"
+              role="img"
+              aria-label="user-icon-hover"
+            >
+              😎
+            </span>
+            {name}
+          </span>
         </div>
       )}
     </div>

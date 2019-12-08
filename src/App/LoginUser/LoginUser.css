@@ -1,3 +1,33 @@
 .LoginUser {
+  text-align: center;
+  margin: auto;
+}
 
+.wrapper {
+  background: #1e1e1e;
+  display: inline-block;
+  margin: 24px;
+  padding: 16px;
+  position: relative;
+  min-width: 270px;
+  text-align: left;
+}
+
+.closingX {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  cursor: pointer;
+}
+
+.text-field {
+  padding-top: 3px;
+}
+
+.closingX:hover {
+  color: #fff;
+}
+
+.pista {
+  font-size: 10px;
 }

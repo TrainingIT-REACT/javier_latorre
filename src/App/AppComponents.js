@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { Route } from "react-router-dom";
 import { connect } from "react-redux";
-import { ALBUMS, ROOT } from "./constants";
+import { ALBUMS, ROOT, USER } from "./constants";
 
 // Css
 import "./App.css";
@@ -37,7 +37,13 @@ class App extends Component {
   };
 
   render() {
-    const { playerOpen, closePlayer, songTitle, songAudio } = this.props;
+    const {
+      playerOpen,
+      closePlayer,
+      songTitle,
+      songAudio,
+      songHistory
+    } = this.props;
     return (
       <>
         <NavBar openLoginUserModal={this.openModal} />
@@ -50,6 +56,9 @@ class App extends Component {
         />
         <Route path={ALBUMS} exact component={Albums} />
         <Route path={`${ALBUMS}/:id`} component={Songs} />
+        {/* <Route path={`${USER}`} render={props => (
+            <Profile {...props} songHistory={songHistory} />
+          )} /> */}
         <Modal open={this.state.openModal}>
           <LoginUser closeModal={this.closeModal} />
         </Modal>
@@ -70,6 +79,7 @@ const mapStateToProps = state => {
   console.log(state);
   return {
     ...state,
+    songHistory: state.player.playerOpen,
     playerOpen: state.player.playerOpen,
     songAudio: state.player.songAudio,
     songTitle: state.player.songTitle

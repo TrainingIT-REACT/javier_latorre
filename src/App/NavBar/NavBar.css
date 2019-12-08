@@ -49,3 +49,18 @@
 .user:hover {
   background: #37373d;
 }
+
+.user:hover .user-icon {
+  background: #37373d;
+  display: none;
+}
+.user:hover .user-icon.hover {
+  background: #37373d;
+  display: inline;
+}
+.user-icon.hover {
+  display: none;
+}
+.user-icon {
+  padding-right: 6px;
+}
