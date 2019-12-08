@@ -1,0 +1,10 @@
+.player {
+  bottom: 12px;
+  right: 12px;
+  position: fixed;
+  background: #252526;
+}
+
+.hidden {
+  display: none;
+}

@@ -1,0 +1,26 @@
+.song-title {
+  margin: 0;
+  font-size: 12px;
+  max-width: 224px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  position: relative;
+  padding: 0 16px 0 8px;
+}
+
+.audio-tag {
+  width: 250px;
+  height: 23px;
+}
+
+.closing-tag {
+  position: absolute;
+  right: 4px;
+  padding: 0 4px;
+  cursor: pointer;
+}
+
+.closing-tag:hover {
+  color: #fff;
+}
