@@ -56,7 +56,6 @@ const LoginUser = ({ closeModal, updateUserName, userList }) => {
 
 const mapStateToProps = state => {
   const userList = state.user.usersDetails.map(user => user.userName);
-  console.log(userList);
   return {
     userList
   };
