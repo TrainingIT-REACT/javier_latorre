@@ -14,8 +14,9 @@
     "redux-promise-middleware-actions": "2.1.0"
   },
   "scripts": {
+    "start": "npm-run-all --parallel server start:dev",
     "server": "json-server --watch server/data.json --static server/static --port 3001",
-    "start": "webpack-dev-server --open --mode=development --port 3000",
+    "start:dev": "webpack-dev-server --open --mode=development --port 3000",
     "build": "webpack --mode=production",
     "test": "jest"
   },
