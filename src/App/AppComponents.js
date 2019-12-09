@@ -17,6 +17,7 @@ import Songs from "./Albums/Songs";
 import Modal from "./Modal";
 import Player from "./Player";
 import LoginUser from "./LoginUser";
+import Profile from "./Profile";
 import PlayerControls from "./PlayerControls";
 
 class App extends Component {
@@ -47,18 +48,13 @@ class App extends Component {
     return (
       <>
         <NavBar openLoginUserModal={this.openModal} />
-        <Route
-          path={ROOT}
-          exact
-          render={props => (
-            <Home {...props} recomendadosList={this.state.albums} />
-          )}
-        />
+        <Route path={ROOT} exact component={Home} />
         <Route path={ALBUMS} exact component={Albums} />
         <Route path={`${ALBUMS}/:id`} component={Songs} />
-        {/* <Route path={`${USER}`} render={props => (
-            <Profile {...props} songHistory={songHistory} />
-          )} /> */}
+        <Route
+          path={`${USER}`}
+          render={props => <Profile {...props} songHistory={songHistory} />}
+        />
         <Modal open={this.state.openModal}>
           <LoginUser closeModal={this.closeModal} />
         </Modal>
@@ -76,10 +72,9 @@ class App extends Component {
 }
 
 const mapStateToProps = state => {
-  console.log(state);
   return {
     ...state,
-    songHistory: state.player.playerOpen,
+    songHistory: state.player.songHistory,
     playerOpen: state.player.playerOpen,
     songAudio: state.player.songAudio,
     songTitle: state.player.songTitle

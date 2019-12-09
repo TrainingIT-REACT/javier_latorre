@@ -1,0 +1,56 @@
+.Profile {
+  position: relative;
+}
+
+.home-content {
+  margin: 32px;
+}
+
+.boton-logout {
+  position: absolute;
+  top: 8px;
+  left: 16px;
+  color: #cfd0d0;
+  padding: 4px 8px 4px 4px;
+}
+
+.boton-logout .hover {
+  display: none;
+}
+.boton-logout:hover .hover {
+  display: inline;
+}
+.boton-logout:hover .default {
+  display: none;
+}
+
+.boton-salvar {
+  position: absolute;
+  top: 8px;
+  right: 16px;
+  color: #cfd0d0;
+  padding: 4px 8px 4px 4px;
+}
+
+.form-container {
+  margin: 8px auto;
+  max-width: 600px;
+}
+
+.historial-container {
+  margin: 8px auto;
+  max-width: 600px;
+}
+
+.fullName-field {
+  width: 100%;
+  margin-bottom: 8px;
+}
+.description-field {
+  height: 50px;
+  width: 100%;
+}
+
+.fecha {
+  color: #7f7f7f;
+}

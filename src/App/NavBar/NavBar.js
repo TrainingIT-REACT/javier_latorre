@@ -1,12 +1,17 @@
 import React from "react";
 import { connect } from "react-redux";
+import { withRouter } from "react-router-dom";
 import { Link } from "react-router-dom";
-import { ROOT, ALBUMS } from "../constants";
+import { ROOT, ALBUMS, USER } from "../constants";
 
 // Css
 import "./NavBar.css";
 
-const NavBar = ({ name, openLoginUserModal }) => {
+const NavBar = ({ name, openLoginUserModal, history }) => {
+  const goToUserProfile = () => {
+    history.push(USER);
+  };
+
   return (
     <div className="NavBar">
       <div className="logo">
@@ -23,7 +28,7 @@ const NavBar = ({ name, openLoginUserModal }) => {
           <span>Login {name}</span>
         </div>
       ) : (
-        <div onClick={openLoginUserModal} className="user">
+        <div onClick={goToUserProfile} className="user">
           <span>
             <span className="user-icon" role="img" aria-label="user-icon">
               🙂
@@ -49,4 +54,4 @@ const mapStateToProps = state => {
   };
 };
 
-export default connect(mapStateToProps)(NavBar);
+export default connect(mapStateToProps)(withRouter(NavBar));
