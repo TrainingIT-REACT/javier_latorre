@@ -4,24 +4,90 @@ exports[`App renders correctly 1`] = `
 <div
   class="App"
 >
-  <header
-    class="App-header"
+  <div
+    class="NavBar"
   >
-    <p>
-      Edit 
-      <code>
-        src/App.js
-      </code>
-       and save to reload.
-    </p>
-    <a
-      class="App-link"
-      href="https://reactjs.org"
-      rel="noopener noreferrer"
-      target="_blank"
+    <div
+      class="logo"
     >
-      Learn React
-    </a>
-  </header>
+      <a
+        href="/"
+      >
+        <span
+          class="logo_first"
+        >
+          Musi
+        </span>
+        <span
+          class="logo_last"
+        >
+          K
+        </span>
+      </a>
+    </div>
+    <div
+      class="albums"
+    >
+      <a
+        href="/albums"
+      >
+        Albums
+      </a>
+    </div>
+    <div
+      class="user"
+    >
+      <span>
+        <span
+          aria-label="user-icon"
+          class="user-icon"
+          role="img"
+        >
+          🙂
+        </span>
+        <span
+          aria-label="user-icon-hover"
+          class="user-icon hover"
+          role="img"
+        >
+          😎
+        </span>
+        Javi
+      </span>
+    </div>
+  </div>
+  <div
+    class="Searcher"
+  >
+    <form>
+      <input
+        class="text-field"
+        id="name"
+        placeholder="Buscar canción"
+        type="text"
+      />
+      <button>
+        <span
+          aria-label="lupa"
+          role="img"
+        >
+          🔎
+        </span>
+      </button>
+    </form>
+  </div>
+  <div
+    class="clear"
+  />
+  <h1>
+    ¡Bienvenido, Javi! Esta es tu lista de recomendados:
+  </h1>
+  <div
+    class="home-content"
+  >
+    <div
+      class="songs-list"
+    />
+  </div>
 </div>
 `;
